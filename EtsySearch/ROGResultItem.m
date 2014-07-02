@@ -32,8 +32,8 @@
     return self;
 }
 
-+ (NSURLSessionDataTask *)searchResultsForKeywords:(NSString*)keywords withBlock:(void (^)(NSArray *results, NSError *error))block {
-    NSDictionary *params = @{@"api_key" : [ROGEtsyAPIClient getAPIKey], @"includes" : @"MainImage", @"keywords" : keywords};
++ (NSURLSessionDataTask *)searchResultsForKeywords:(NSString*)keywords pageNumber:(int)page withBlock:(void (^)(NSArray *results, NSError *error))block {
+    NSDictionary *params = @{@"api_key" : [ROGEtsyAPIClient getAPIKey], @"includes" : @"MainImage", @"keywords" : keywords, @"page" : [NSNumber numberWithInt:page]};
     return [[ROGEtsyAPIClient sharedClient] GET:@"v2/listings/active" parameters:params success:^(NSURLSessionDataTask * __unused task, id JSON) {
         NSNumber *count = [JSON valueForKey:@"count"];
         if (count.intValue > 0) {

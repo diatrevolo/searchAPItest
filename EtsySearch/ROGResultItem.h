@@ -24,7 +24,7 @@
 
 - (instancetype)initWithAttributes:(NSDictionary *)attributes;
 
-+ (NSURLSessionDataTask *)searchResultsForKeywords:(NSString*)keywords withBlock:(void (^)(NSArray *results, NSError *error))block;
++ (NSURLSessionDataTask *)searchResultsForKeywords:(NSString*)keywords pageNumber:(int)page withBlock:(void (^)(NSArray *results, NSError *error))block;
 
 @end
 

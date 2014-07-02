@@ -11,7 +11,7 @@
 #import "ROGItemTableViewCell.h"
 #import "UIImageView+AFNetworking.h"
 
-@interface ROGViewController : UIViewController <UISearchDisplayDelegate, UISearchBarDelegate, UITableViewDelegate, UITableViewDataSource, UIGestureRecognizerDelegate>
+@interface ROGViewController : UIViewController <UISearchDisplayDelegate, UISearchBarDelegate, UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) NSArray *searchResults;
 @property (nonatomic, weak) IBOutlet UISearchBar *searchBar;
