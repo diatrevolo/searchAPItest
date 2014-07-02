@@ -55,7 +55,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.row == self.searchResults.count && self.searchResults != nil) {
+    if (indexPath.row == self.searchResults.count && self.searchResults > 0) {
         static NSString *MoreCellIdentifier = @"MoreCell";
         UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:MoreCellIdentifier];
         
