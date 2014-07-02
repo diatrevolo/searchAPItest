@@ -569,6 +569,7 @@
 				8D6662A41964678F00809464 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8D6662A51964678F00809464 /* Build configuration list for PBXNativeTarget "EtsySearchTests" */ = {
 			isa = XCConfigurationList;
@@ -577,6 +578,7 @@
 				8D6662A71964678F00809464 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

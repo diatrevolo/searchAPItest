@@ -50,18 +50,19 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [self.searchResults count] + 1;
+    return [self.searchResults count] + 1 == 1 ? 0 : [self.searchResults count] + 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.row == self.searchResults.count && self.searchResults.count > 0) {
+    if (indexPath.row == self.searchResults.count && self.searchResults != nil) {
         static NSString *MoreCellIdentifier = @"MoreCell";
         UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:MoreCellIdentifier];
         
         if (cell==nil) {
             cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:MoreCellIdentifier];
         }
+
         [cell.textLabel setText:@"Load More"];
         return cell;
     } else {
