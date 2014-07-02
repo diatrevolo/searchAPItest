@@ -84,6 +84,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [self.searchBar resignFirstResponder];
     if (indexPath.row == self.searchResults.count) {
         pageNumber++;
         NSMutableArray *mutableArray = [NSMutableArray arrayWithArray:self.searchResults];
