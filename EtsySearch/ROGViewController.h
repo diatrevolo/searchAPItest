@@ -7,7 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ROGResultItem.h"
+#import "ROGItemTableViewCell.h"
+#import "UIImageView+AFNetworking.h"
 
-@interface ROGViewController : UIViewController
+@interface ROGViewController : UIViewController <UISearchDisplayDelegate, UISearchBarDelegate, UITableViewDelegate, UITableViewDataSource, UIGestureRecognizerDelegate>
+
+@property (nonatomic, strong) NSArray *searchResults;
+@property (nonatomic, weak) IBOutlet UISearchBar *searchBar;
+@property (nonatomic, weak) IBOutlet UITableView *tableView;
+
+- (void)viewTapped:(UITapGestureRecognizer*)tapGestureRecognizer;
 
 @end
